@@ -20,7 +20,9 @@ Below are models that i used in this project.
 
 write below command in bash to clone this repository: 
 
-```git clone https://github.com/siddharth756/BankSystemAPI-DRF.git```
+```
+git clone https://github.com/siddharth756/BankSystemAPI-DRF.git
+```
 
 
 <h3>API endpoints :</h3> 
@@ -32,23 +34,23 @@ api app runs at ```http://127.0.0.1:8000/api/``` .
 
 #### 1. For Banks
 
- ```http://127.0.0.1:8000/api/bank/``` - to view and create bank. 
+ ```http://127.0.0.1:8000/api/bank/``` - to view and create bank. <br>
  ```http://127.0.0.1:8000/api/bank_detail/<int:pk>/``` - to retrieve, update and delete bank.
 
 #### 2. Branch
 
- ```http://127.0.0.1:8000/api/branch/``` - to view and create branch. 
+ ```http://127.0.0.1:8000/api/branch/``` - to view and create branch. <br>
  ```http://127.0.0.1:8000/api/branch_detail/<int:pk>/``` - to retrieve, update and delete branch.
 
 #### 3. Customer
 
- ```http://127.0.0.1:8000/api/customers/``` - to list all customers. 
+ ```http://127.0.0.1:8000/api/customers/``` - to list all customers. <br>
  ```http://127.0.0.1:8000/api/branch_detail/<int:pk>/``` - to retrieve, update and delete customer.
 
 #### 4. Account
 
- ```http://127.0.0.1:8000/api/create_account/``` - to craete account. 
- ```http://127.0.0.1:8000/api/accounts/``` - to list all accounts.
+ ```http://127.0.0.1:8000/api/create_account/``` - to craete account. <br>
+ ```http://127.0.0.1:8000/api/accounts/``` - to list all accounts. <br>
  ```http://127.0.0.1:8000/api/account_detail/<int:pk>/``` - to retrieve, update and delete account.
 
 #### 5. Deposit
