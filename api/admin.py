@@ -1,23 +1,19 @@
 from django.contrib import admin
-from .models import Bank, Branch, Client, Account, Transfer, Withdraw, Deposit
+from .models import *
 
 # Register your models here.
 
 class BankAdmin(admin.ModelAdmin):
-    list_display = ['name','branch']
+    list_display = ['bank_name','branch']
 
 class BranchAdmin(admin.ModelAdmin):
-    list_display = ['name','address','branch_code']
+    list_display = ['branch_name','branch_address','branch_code']
 
 class AccountAdmin(admin.ModelAdmin):
-    list_display = ['client','bank','branch_name','open_date','account_type','balance']
+    list_display = ['customer','bank','branch','account_number','account_type','balance','created_at']
 
-    def branch_name(self,obj):
-        return obj.bank.branch.name
-    branch_name.short_description = 'branch name'
-
-class ClientAdmin(admin.ModelAdmin):
-    list_display = ['name','address']
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ['customer_name','customer_phone','customer_address']
 
 class DepositAdmin(admin.ModelAdmin):
     list_display = ['account','amount']
@@ -28,8 +24,7 @@ class WithdrawAdmin(admin.ModelAdmin):
 
 admin.site.register(Bank, BankAdmin)
 admin.site.register(Branch, BranchAdmin)
-admin.site.register(Client, ClientAdmin)
+admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Account, AccountAdmin)
-admin.site.register(Transfer)
 admin.site.register(Withdraw, WithdrawAdmin)
 admin.site.register(Deposit, DepositAdmin)
